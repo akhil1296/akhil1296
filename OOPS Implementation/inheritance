@@ -1,0 +1,26 @@
+class Animal{
+    int leg = 4 ;
+    public void showName(){
+         System.out.println("Bird is also knind of Animal");
+    }
+}
+
+class Bird extends Animal{
+   String outer = "feather";
+   public void showCovering(){
+         System.out.println("My outer covering is  feather");
+    }
+}
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         
+         Bird obj = new Bird();
+         
+        obj.showCovering();
+        obj.showName();
+        System.out.println(obj.outer);
+        System.out.println(obj.leg);
+     }
+}

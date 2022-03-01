@@ -1,0 +1,42 @@
+// Implementing Enacpsulation
+class Animal{
+    
+    private String name;
+    private int legs;
+    private boolean feather;
+    
+    public void setName(String n){
+        this.name = n ;
+    }
+    public String getName(){
+        return name ;
+    }
+    
+    public void setLegs(int leg){
+        this.legs = leg ;
+    }
+    public int getLegs(){
+        return legs;
+    }
+    
+    public void setFeather(boolean x){
+        this.feather = x ;
+    }
+    public boolean getFeather(){
+        return feather ;
+    }
+}
+public class HelloWorld{
+
+     public static void main(String []args){
+         Animal obj = new Animal();
+         
+         obj.setFeather(true);
+         obj.setLegs(4);
+         obj.setName("Eagle");
+         
+         System.out.println(obj.getName());
+         System.out.println(obj.getLegs());
+         System.out.println(obj.getFeather());
+     }
+}

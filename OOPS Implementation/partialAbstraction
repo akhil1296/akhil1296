@@ -1,0 +1,48 @@
+// Implementing Abstraction
+// Partial Abstraction // abstract class
+
+abstract class Animal{
+    // abstract methods
+    abstract void fly();
+    abstract void eat();
+    // direct methods
+    void label(){
+        System.out.println("Animals feature : ");
+    }
+}
+
+class Bird extends Animal{
+    void fly(){
+         System.out.println("Yes, birds can fly. ");
+    }
+    void eat(){
+         System.out.println("Birds eat grains. ");
+    }
+}
+
+class Fish extends Animal{
+    void fly(){
+         System.out.println("No, fish can not fly. ");
+    }
+    void eat(){
+         System.out.println("Fish eat insects. ");
+    }
+}
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        Animal obj = new Bird();
+         
+        obj.label();
+        obj.eat();
+        obj.fly();
+        
+        System.out.println("-----------------------");
+        Animal obj2 = new Fish();
+        
+        obj2.label();
+        obj2.eat();
+        obj2.fly();
+     }
+}

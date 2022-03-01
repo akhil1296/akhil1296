@@ -1,0 +1,43 @@
+// Implementing Abstraction
+// Complete Abstraction // interface 
+
+interface Animal{
+
+    public void fly();
+    public void eat();
+
+}
+
+interface Bird{
+
+   int legs = 2 ;
+   String outerCover = "feather";
+   public void sound();
+}
+// Showing multiple inheritance
+class Eagle implements Animal, Bird{
+    public void fly(){
+        System.out.println("Eagle can fly upto 10k feets high");
+    }   
+    public void eat(){
+        System.out.println("Eagle can eat insects");    
+    }
+    public void sound(){
+        System.out.println("Eagle sound is high pitching sound");
+    }
+}
+
+
+public class HelloWorld{
+
+     public static void main(String []args){
+         Eagle obj = new Eagle();
+         
+         obj.fly();
+         obj.eat();
+         obj.sound();
+         
+         System.out.println("outer overing is : "+ Bird.outerCover);
+         System.out.println("legs : "+ Bird.legs);
+     }
+}
